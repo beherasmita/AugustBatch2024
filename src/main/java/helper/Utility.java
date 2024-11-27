@@ -18,6 +18,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class Utility {
 /* Select , wait ,actions,screenshots,scroll,jsexecutor,switchtoframe */
 	//method to give date in form of string
+	public void waitForSeconds(int seconds) {
+		try {
+			Thread.sleep(seconds*1000);
+		} catch (InterruptedException e) {
+			
+		}
+	}
 	public static String getScreenshotAsBase64(WebDriver driver) {
 		TakesScreenshot ts = (TakesScreenshot)driver;
 		String screenshot = ts.getScreenshotAs(OutputType.BASE64);
